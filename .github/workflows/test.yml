@@ -22,19 +22,12 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/setup-python@v2
-      - uses: jannekem/run-python-script-action@v1
+      - name: checkout repo content
+        uses: actions/checkout@v2 # checkout the repository content to github runner.
+      - name: setup python
+        uses: actions/setup-python@v2
         with:
-          script: |
-            from ast import operator
-            import hello_operator
-            from threading import Event # Needed for the  wait() method
-            from time import sleep     
-
-            print("Calling Operator")
-            print("\n wait for 100 sec start")
-
-            hello_operator.HelloOperator.execute()
-            sleep(100)  
-            print("Execute custom operator")
-
+          python-version: 3.8 #install the python needed
+      - name: execute py script # run the run.py to get the latest data
+        run: |
+          python b.py
