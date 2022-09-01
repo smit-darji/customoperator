@@ -13,7 +13,7 @@
 # hello_task
 
 
-from jobs import hello_operator
+import hello_operator
 from threading import Event # Needed for the  wait() method
 from time import sleep     
 
