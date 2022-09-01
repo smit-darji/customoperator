@@ -12,7 +12,7 @@
 
 # hello_task
 
-from ast import operator
+
 import hello_operator
 from threading import Event # Needed for the  wait() method
 from time import sleep     
