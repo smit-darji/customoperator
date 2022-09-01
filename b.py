@@ -19,6 +19,7 @@ from time import sleep
 
 print("Calling Operator")
 print("\n wait for 100 sec start")
-sleep(100)  
+
 hello_operator.HelloOperator.execute()
+sleep(100)  
 print("Execute custom operator")
